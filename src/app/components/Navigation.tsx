@@ -56,7 +56,7 @@ export function Navigation() {
             <img
               src={Logo}
               alt="HashX Innovations Logo"
-              className="h-10 w-auto object-contain"
+              className="h-14 lg:h-16 w-auto object-contain"
             />
           </div>
 
