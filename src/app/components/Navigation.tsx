@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from '@/app/components/ui/button';
+import Logo from '@/assets/logo.png';
 
 export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -49,16 +50,14 @@ export function Navigation() {
     <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
+
           {/* Logo */}
           <div className="flex items-center">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-[#615BEA] rounded flex items-center justify-center">
-                <span className="text-white font-bold text-lg">#</span>
-              </div>
-              <span className="text-xl font-bold text-[#0F172A]" style={{ fontFamily: 'Manrope, sans-serif' }}>
-                HashX Innovations
-              </span>
-            </div>
+            <img
+              src={Logo}
+              alt="HashX Innovations Logo"
+              className="h-10 w-auto object-contain"
+            />
           </div>
 
           {/* Desktop Navigation */}
@@ -66,9 +65,9 @@ export function Navigation() {
             <a href="#about" className="text-[#334155] hover:text-[#615BEA] transition-colors">
               About
             </a>
-            
+
             {/* Services Mega Menu */}
-            <div 
+            <div
               className="relative"
               onMouseEnter={() => setServicesOpen(true)}
               onMouseLeave={() => setServicesOpen(false)}
@@ -77,13 +76,13 @@ export function Navigation() {
                 Services
                 <ChevronDown className="w-4 h-4" />
               </button>
-              
+
               {servicesOpen && (
                 <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[800px] bg-white rounded-lg shadow-xl border border-gray-200 p-8">
                   <div className="grid grid-cols-4 gap-6">
                     {services.map((pillar) => (
                       <div key={pillar.category}>
-                        <h4 className="font-semibold text-[#615BEA] mb-3" style={{ fontFamily: 'Manrope, sans-serif' }}>
+                        <h4 className="font-semibold text-[#615BEA] mb-3">
                           {pillar.category}
                         </h4>
                         <ul className="space-y-2">
@@ -101,7 +100,7 @@ export function Navigation() {
                 </div>
               )}
             </div>
-            
+
             <a href="#industries" className="text-[#334155] hover:text-[#615BEA] transition-colors">
               Industries
             </a>
@@ -124,7 +123,7 @@ export function Navigation() {
           </div>
 
           {/* Mobile Menu Button */}
-          <button 
+          <button
             className="lg:hidden text-[#334155]"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
