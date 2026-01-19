@@ -27,7 +27,7 @@ export function PartnerEcosystem() {
       name: 'Palo Alto Networks',
       logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8wjsl4BMgWMITv6_NrJbgA0HKUrFwcNdWPQ&s'
     },
-    {
+ <center></>   {
       name: 'OREL Cloud',
       logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe_Fta4J12ZRSb7LtrGuhMskjeLXyPNJO8jQ&s'
     },
@@ -46,7 +46,7 @@ export function PartnerEcosystem() {
     {
       name: 'Fortinet',
       logo: 'https://upload.wikimedia.org/wikipedia/commons/6/62/Fortinet_logo.svg'
-    }
+    }</center>
   ];
 
   return (
