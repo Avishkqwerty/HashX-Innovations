@@ -8,13 +8,13 @@
   --card-foreground: #334155;
   --popover: #ffffff;
   --popover-foreground: #334155;
-  --primary: #615BEA;
+  --primary: #1E3A8A;
   --primary-foreground: #ffffff;
-  --secondary: #0D1227;
+  --secondary: #0F766E;
   --secondary-foreground: #ffffff;
   --muted: #FAFAFF;
   --muted-foreground: #717182;
-  --accent: #7A71F0;
+  --accent: #06B6D4;
   --accent-foreground: #ffffff;
   --destructive: #d4183d;
   --destructive-foreground: #ffffff;
@@ -24,7 +24,7 @@
   --switch-background: #cbced4;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --ring: #615BEA;
+  --ring: #3B82F6;
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -33,16 +33,27 @@
   --radius: 0.5rem;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: #615BEA;
+  --sidebar-primary: #1E3A8A;
   --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: oklch(0.97 0 0);
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: #615BEA;
+  --sidebar-ring: #3B82F6;
   
-  /* HashX Brand Colors */
-  --hashx-purple: #615BEA;
-  --hashx-purple-hover: #7A71F0;
+  /* HashX Brand Colors - New Tech Gradient Palette */
+  /* Primary: Deep Blue */
+  --hashx-purple: #1E3A8A;
+  --hashx-purple-hover: #3B82F6;
+  /* Secondary: Teal Accent */
+  --hashx-teal: #0F766E;
+  --hashx-teal-light: #14B8A6;
+  /* Accent: Neon Cyan */
+  --hashx-cyan: #06B6D4;
+  --hashx-cyan-light: #22D3EE;
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 50%, #06B6D4 100%);
+  --gradient-neon: linear-gradient(90deg, #3B82F6 0%, #0EA5E9 50%, #14B8A6 100%);
+  
   --hashx-navy: #0D1227;
   --hashx-canvas: #FAFAFF;
   --hashx-text: #334155;

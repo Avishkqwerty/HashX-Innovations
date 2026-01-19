@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
 import { ChevronLeft, ChevronRight, Cloud, Brain, Shield, RefreshCw } from 'lucide-react';
 import { Button } from '@/app/components/ui/button';
+import { fadeInUp, hoverButtonScale, hoverCardLift, staggerContainer } from '@/lib/animations';
 
 export function FeaturedServices() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -50,33 +52,73 @@ export function FeaturedServices() {
   return (
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div className="inline-block px-4 py-1 bg-[#615BEA]/10 rounded-full text-[#615BEA] text-sm font-semibold mb-4">
+        <motion.div
+          className="text-center mb-16"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <motion.div
+            className="inline-block px-4 py-1 bg-[#3B82F6]/10 rounded-full text-[#3B82F6] text-sm font-semibold mb-4"
+            variants={fadeInUp}
+          >
             FEATURED OFFERINGS
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#0F172A] mb-4" style={{ fontFamily: 'Manrope, sans-serif' }}>
+          </motion.div>
+          <motion.h2
+            className="text-4xl md:text-5xl font-bold text-[#0F172A] mb-4"
+            style={{ fontFamily: 'Manrope, sans-serif' }}
+            variants={fadeInUp}
+          >
             Enterprise-Grade Solutions
-          </h2>
-          <p className="text-xl text-[#334155]">High-impact services that accelerate business transformation</p>
-        </div>
+          </motion.h2>
+          <motion.p
+            className="text-xl text-[#334155]"
+            variants={fadeInUp}
+          >
+            High-impact services that accelerate business transformation
+          </motion.p>
+        </motion.div>
 
         <div className="relative">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+          <motion.div
+            className="grid md:grid-cols-2 gap-8 items-center"
+            layout
+          >
             {/* Image */}
-            <div className="relative h-[400px] rounded-xl overflow-hidden">
-              <img 
+            <motion.div
+              className="relative h-[400px] rounded-xl overflow-hidden"
+              key={`image-${currentIndex}`}
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.5 }}
+            >
+              <motion.img 
                 src={currentService.image}
                 alt={currentService.title}
                 className="w-full h-full object-cover"
+                animate={{ scale: [1, 1.05, 1] }}
+                transition={{ duration: 5, repeat: Infinity }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0D1227]/80 to-transparent" />
-            </div>
+            </motion.div>
 
             {/* Content */}
-            <div>
-              <div className="w-16 h-16 bg-[#615BEA]/10 rounded-xl flex items-center justify-center mb-6">
-                <ServiceIcon className="w-8 h-8 text-[#615BEA]" />
-              </div>
+            <motion.div
+              key={`content-${currentIndex}`}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              transition={{ duration: 0.5 }}
+            >
+              <motion.div
+                className="w-16 h-16 bg-[#3B82F6]/10 rounded-xl flex items-center justify-center mb-6"
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                transition={{ duration: 0.3 }}
+              >
+                <ServiceIcon className="w-8 h-8 text-[#3B82F6]" />
+              </motion.div>
               
               <h3 className="text-3xl font-bold text-[#0F172A] mb-4" style={{ fontFamily: 'Manrope, sans-serif' }}>
                 {currentService.title}
@@ -86,46 +128,65 @@ export function FeaturedServices() {
                 {currentService.description}
               </p>
               
-              <div className="flex items-center gap-2 mb-8">
-                <span className="px-3 py-1 bg-[#615BEA]/10 text-[#615BEA] rounded-full text-sm font-medium">
+              <motion.div
+                className="flex items-center gap-2 mb-8"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.2 }}
+              >
+                <span className="px-3 py-1 bg-[#3B82F6]/10 text-[#3B82F6] rounded-full text-sm font-medium">
                   {currentService.platforms}
                 </span>
-              </div>
+              </motion.div>
 
-              <Button className="bg-[#615BEA] hover:bg-[#7A71F0] text-white shadow-lg shadow-[#615BEA]/30">
-                Learn More
-              </Button>
-            </div>
-          </div>
+              <motion.div {...hoverButtonScale}>
+                <Button className="bg-[#3B82F6] hover:bg-[#06B6D4] text-white shadow-lg shadow-[#3B82F6]/30">
+                  Learn More
+                </Button>
+              </motion.div>
+            </motion.div>
+          </motion.div>
 
           {/* Navigation */}
-          <div className="flex items-center justify-center gap-4 mt-8">
-            <button
+          <motion.div
+            className="flex items-center justify-center gap-4 mt-8"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            <motion.button
               onClick={prevSlide}
-              className="w-10 h-10 rounded-full border-2 border-[#615BEA] text-[#615BEA] hover:bg-[#615BEA] hover:text-white transition-colors flex items-center justify-center"
+              className="w-10 h-10 rounded-full border-2 border-[#3B82F6] text-[#3B82F6] hover:bg-[#3B82F6] hover:text-white transition-colors flex items-center justify-center"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.2 }}
             >
               <ChevronLeft className="w-5 h-5" />
-            </button>
+            </motion.button>
             
             <div className="flex gap-2">
               {services.map((_, index) => (
-                <button
+                <motion.button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-all ${
-                    index === currentIndex ? 'bg-[#615BEA] w-8' : 'bg-gray-300'
+                  className={`rounded-full transition-all ${
+                    index === currentIndex ? 'bg-[#3B82F6] w-8 h-2' : 'bg-gray-300 w-2 h-2'
                   }`}
+                  whileHover={{ scale: 1.2 }}
+                  transition={{ duration: 0.2 }}
                 />
               ))}
             </div>
 
-            <button
+            <motion.button
               onClick={nextSlide}
-              className="w-10 h-10 rounded-full border-2 border-[#615BEA] text-[#615BEA] hover:bg-[#615BEA] hover:text-white transition-colors flex items-center justify-center"
+              className="w-10 h-10 rounded-full border-2 border-[#3B82F6] text-[#3B82F6] hover:bg-[#3B82F6] hover:text-white transition-colors flex items-center justify-center"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.2 }}
             >
               <ChevronRight className="w-5 h-5" />
-            </button>
-          </div>
+            </motion.button>
+          </motion.div>
         </div>
       </div>
     </section>
