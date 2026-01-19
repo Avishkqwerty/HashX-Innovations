@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import type { Variants } from 'motion/react';
+import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react';
 
 const staggerContainer: Variants = {
@@ -39,9 +40,9 @@ const listItem: Variants = {
 export function Footer() {
   const footerLinks = {
     'HashX': [
-      { label: 'About Us', href: '#about' },
-      { label: 'Leadership Team', href: '#leadership' },
-      { label: 'Careers', href: '#careers' },
+      { label: 'About Us', href: '/about', isRoute: true },
+      { label: 'Leadership Team', href: '/about#team', isRoute: true },
+      { label: 'Careers', href: '/careers', isRoute: true },
       { label: 'News & Press', href: '#news' }
     ],
     'Services': [
@@ -52,14 +53,14 @@ export function Footer() {
       { label: 'All Services', href: '#services' }
     ],
     'Support': [
-      { label: 'Contact Us', href: '#contact' },
+      { label: 'Contact Us', href: '/contact', isRoute: true },
       { label: 'Service Level Agreement', href: '#sla' },
       { label: 'System Status', href: '#status' },
       { label: 'Documentation', href: '#docs' }
     ],
     'Legal & Compliance': [
-      { label: 'Privacy Policy', href: '#privacy' },
-      { label: 'Terms of Service', href: '#terms' },
+      { label: 'Privacy Policy', href: '/privacy-policy', isRoute: true },
+      { label: 'Terms of Service', href: '/terms-of-service', isRoute: true },
       { label: 'ISO 27001 Certification', href: '#iso' },
       { label: 'Compliance Docs', href: '#compliance' }
     ]
@@ -131,12 +132,21 @@ export function Footer() {
               >
                 {links.map((link) => (
                   <motion.li key={link.label} variants={listItem} whileHover={{ x: 4 }}>
-                    <a 
-                      href={link.href}
-                      className="text-sm text-gray-400 hover:text-[#615BEA] transition-colors"
-                    >
-                      {link.label}
-                    </a>
+                    {link.isRoute ? (
+                      <Link
+                        to={link.href}
+                        className="text-sm text-gray-400 hover:text-[#615BEA] transition-colors"
+                      >
+                        {link.label}
+                      </Link>
+                    ) : (
+                      <a 
+                        href={link.href}
+                        className="text-sm text-gray-400 hover:text-[#615BEA] transition-colors"
+                      >
+                        {link.label}
+                      </a>
+                    )}
                   </motion.li>
                 ))}
               </motion.ul>

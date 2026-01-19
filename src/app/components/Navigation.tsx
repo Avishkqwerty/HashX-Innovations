@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from '@/app/components/ui/button';
@@ -8,6 +9,17 @@ import { slideDown } from '@/lib/animations';
 export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const { pathname } = useLocation();
+
+  // Helper function to determine if a link is active
+  const isActive = (path: string) => pathname === path;
+
+  // Helper function to get active link styles
+  const getLinkClass = (path: string) => {
+    return isActive(path)
+      ? 'text-[#615BEA] font-semibold'
+      : 'text-[#334155]';
+  };
 
   const services = [
     {
@@ -54,7 +66,7 @@ export function Navigation() {
         <div className="flex justify-between items-center h-20">
 
           {/* Logo */}
-          <div className="flex items-center">
+          <Link to="/" className="flex items-center">
             <motion.img
               src={Logo}
               alt="HashX Innovations Logo"
@@ -63,18 +75,28 @@ export function Navigation() {
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.2 }}
             />
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
-            <motion.a
-              href="#about"
-              className="text-[#334155] hover:text-[#615BEA] transition-colors"
-              whileHover={{ y: -2 }}
-              transition={{ duration: 0.2 }}
-            >
-              About
-            </motion.a>
+            <Link to="/about">
+              <motion.div className="relative">
+                <motion.div
+                  className={`${getLinkClass('/about')} hover:text-[#615BEA] transition-colors`}
+                  whileHover={{ y: -2 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  About
+                </motion.div>
+                {isActive('/about') && (
+                  <motion.div
+                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-[#615BEA] to-[#7A71F0]"
+                    layoutId="underline"
+                    transition={{ type: 'spring', stiffness: 380, damping: 40 }}
+                  />
+                )}
+              </motion.div>
+            </Link>
 
             {/* Services Mega Menu */}
             <div
@@ -134,38 +156,78 @@ export function Navigation() {
               </AnimatePresence>
             </div>
 
-            <motion.a
-              href="#industries"
-              className="text-[#334155] hover:text-[#615BEA] transition-colors"
-              whileHover={{ y: -2 }}
-              transition={{ duration: 0.2 }}
-            >
-              Industries
-            </motion.a>
-            <motion.a
-              href="#case-studies"
-              className="text-[#334155] hover:text-[#615BEA] transition-colors"
-              whileHover={{ y: -2 }}
-              transition={{ duration: 0.2 }}
-            >
-              Case Studies
-            </motion.a>
-            <motion.a
-              href="#careers"
-              className="text-[#334155] hover:text-[#615BEA] transition-colors"
-              whileHover={{ y: -2 }}
-              transition={{ duration: 0.2 }}
-            >
-              Careers
-            </motion.a>
-            <motion.a
-              href="#contact"
-              className="text-[#334155] hover:text-[#615BEA] transition-colors"
-              whileHover={{ y: -2 }}
-              transition={{ duration: 0.2 }}
-            >
-              Contact
-            </motion.a>
+            <Link to="/industries">
+              <motion.div className="relative">
+                <motion.div
+                  className={`${getLinkClass('/industries')} hover:text-[#615BEA] transition-colors`}
+                  whileHover={{ y: -2 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  Industries
+                </motion.div>
+                {isActive('/industries') && (
+                  <motion.div
+                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-[#615BEA] to-[#7A71F0]"
+                    layoutId="underline"
+                    transition={{ type: 'spring', stiffness: 380, damping: 40 }}
+                  />
+                )}
+              </motion.div>
+            </Link>
+            <Link to="/case-studies">
+              <motion.div className="relative">
+                <motion.div
+                  className={`${getLinkClass('/case-studies')} hover:text-[#615BEA] transition-colors`}
+                  whileHover={{ y: -2 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  Case Studies
+                </motion.div>
+                {isActive('/case-studies') && (
+                  <motion.div
+                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-[#615BEA] to-[#7A71F0]"
+                    layoutId="underline"
+                    transition={{ type: 'spring', stiffness: 380, damping: 40 }}
+                  />
+                )}
+              </motion.div>
+            </Link>
+            <Link to="/careers">
+              <motion.div className="relative">
+                <motion.div
+                  className={`${getLinkClass('/careers')} hover:text-[#615BEA] transition-colors`}
+                  whileHover={{ y: -2 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  Careers
+                </motion.div>
+                {isActive('/careers') && (
+                  <motion.div
+                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-[#615BEA] to-[#7A71F0]"
+                    layoutId="underline"
+                    transition={{ type: 'spring', stiffness: 380, damping: 40 }}
+                  />
+                )}
+              </motion.div>
+            </Link>
+            <Link to="/contact">
+              <motion.div className="relative">
+                <motion.div
+                  className={`${getLinkClass('/contact')} hover:text-[#615BEA] transition-colors`}
+                  whileHover={{ y: -2 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  Contact
+                </motion.div>
+                {isActive('/contact') && (
+                  <motion.div
+                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-[#615BEA] to-[#7A71F0]"
+                    layoutId="underline"
+                    transition={{ type: 'spring', stiffness: 380, damping: 40 }}
+                  />
+                )}
+              </motion.div>
+            </Link>
           </div>
 
           {/* CTA Button */}
@@ -201,46 +263,96 @@ export function Navigation() {
               transition={{ duration: 0.3 }}
             >
               <div className="flex flex-col space-y-4">
-                <motion.a
-                  href="#about"
-                  className="text-[#334155] hover:text-[#615BEA]"
-                  whileHover={{ x: 4 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  About
-                </motion.a>
-                <motion.a
-                  href="#industries"
-                  className="text-[#334155] hover:text-[#615BEA]"
-                  whileHover={{ x: 4 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  Industries
-                </motion.a>
-                <motion.a
-                  href="#case-studies"
-                  className="text-[#334155] hover:text-[#615BEA]"
-                  whileHover={{ x: 4 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  Case Studies
-                </motion.a>
-                <motion.a
-                  href="#careers"
-                  className="text-[#334155] hover:text-[#615BEA]"
-                  whileHover={{ x: 4 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  Careers
-                </motion.a>
-                <motion.a
-                  href="#contact"
-                  className="text-[#334155] hover:text-[#615BEA]"
-                  whileHover={{ x: 4 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  Contact
-                </motion.a>
+                <Link to="/about">
+                  <motion.div className="relative">
+                    <motion.div
+                      className={`${getLinkClass('/about')} hover:text-[#615BEA]`}
+                      whileHover={{ x: 4 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      About
+                    </motion.div>
+                    {isActive('/about') && (
+                      <motion.div
+                        className="h-0.5 bg-gradient-to-r from-[#615BEA] to-[#7A71F0] mt-1"
+                        layoutId="mobileUnderline"
+                        transition={{ type: 'spring', stiffness: 380, damping: 40 }}
+                      />
+                    )}
+                  </motion.div>
+                </Link>
+                <Link to="/industries">
+                  <motion.div className="relative">
+                    <motion.div
+                      className={`${getLinkClass('/industries')} hover:text-[#615BEA]`}
+                      whileHover={{ x: 4 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      Industries
+                    </motion.div>
+                    {isActive('/industries') && (
+                      <motion.div
+                        className="h-0.5 bg-gradient-to-r from-[#615BEA] to-[#7A71F0] mt-1"
+                        layoutId="mobileUnderline"
+                        transition={{ type: 'spring', stiffness: 380, damping: 40 }}
+                      />
+                    )}
+                  </motion.div>
+                </Link>
+                <Link to="/case-studies">
+                  <motion.div className="relative">
+                    <motion.div
+                      className={`${getLinkClass('/case-studies')} hover:text-[#615BEA]`}
+                      whileHover={{ x: 4 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      Case Studies
+                    </motion.div>
+                    {isActive('/case-studies') && (
+                      <motion.div
+                        className="h-0.5 bg-gradient-to-r from-[#615BEA] to-[#7A71F0] mt-1"
+                        layoutId="mobileUnderline"
+                        transition={{ type: 'spring', stiffness: 380, damping: 40 }}
+                      />
+                    )}
+                  </motion.div>
+                </Link>
+                <Link to="/careers">
+                  <motion.div className="relative">
+                    <motion.div
+                      className={`${getLinkClass('/careers')} hover:text-[#615BEA]`}
+                      whileHover={{ x: 4 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      Careers
+                    </motion.div>
+                    {isActive('/careers') && (
+                      <motion.div
+                        className="h-0.5 bg-gradient-to-r from-[#615BEA] to-[#7A71F0] mt-1"
+                        layoutId="mobileUnderline"
+                        transition={{ type: 'spring', stiffness: 380, damping: 40 }}
+                      />
+                    )}
+                  </motion.div>
+                </Link>
+                <Link to="/contact">
+                  <motion.div className="relative">
+                    <motion.div
+                      className={`${getLinkClass('/contact')} hover:text-[#615BEA]`}
+                      whileHover={{ x: 4 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      Contact
+                    </motion.div>
+                    {isActive('/contact') && (
+                      <motion.div
+                        className="h-0.5 bg-gradient-to-r from-[#615BEA] to-[#7A71F0] mt-1"
+                        layoutId="mobileUnderline"
+                        transition={{ type: 'spring', stiffness: 380, damping: 40 }}
+                      />
+                    )}
+                  </motion.div>
+                </Link>
                 <motion.div
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
