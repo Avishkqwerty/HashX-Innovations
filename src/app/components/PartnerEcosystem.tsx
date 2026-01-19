@@ -28,7 +28,7 @@ export function PartnerEcosystem() {
       logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8wjsl4BMgWMITv6_NrJbgA0HKUrFwcNdWPQ&s'
     },
     {
-      name: 'Fortinet',
+      name: 'OREL Cloud',
       logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe_Fta4J12ZRSb7LtrGuhMskjeLXyPNJO8jQ&s'
     },
     {
@@ -42,6 +42,10 @@ export function PartnerEcosystem() {
     {
       name: 'Zoho',
       logo: 'https://www.zoho.com/sites/zweb/images/zoho_general_pages/zoho-logo-512.png'
+    }
+    {
+      name: 'Fortinet',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/6/62/Fortinet_logo.svg'
     }
   ];
 
