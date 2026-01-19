@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { staggerContainer, fadeInUp, scaleIn } from '@/lib/animations';
+import { staggerContainer, fadeInUp } from '@/lib/animations';
 
 export function PartnerEcosystem() {
   const partners = [
@@ -26,6 +26,22 @@ export function PartnerEcosystem() {
     {
       name: 'Palo Alto Networks',
       logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8wjsl4BMgWMITv6_NrJbgA0HKUrFwcNdWPQ&s'
+    },
+    {
+      name: 'Fortinet',
+      logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe_Fta4J12ZRSb7LtrGuhMskjeLXyPNJO8jQ&s'
+    },
+    {
+      name: 'Sophos',
+      logo: 'https://logos-world.net/wp-content/uploads/2024/07/Sophos-Logo.png'
+    },
+    {
+      name: 'Microsoft Azure',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Microsoft_Azure_Logo.svg/1280px-Microsoft_Azure_Logo.svg.png'
+    },
+    {
+      name: 'Zoho',
+      logo: 'https://www.zoho.com/sites/zweb/images/zoho_general_pages/zoho-logo-512.png'
     }
   ];
 
@@ -47,6 +63,7 @@ export function PartnerEcosystem() {
           >
             TECHNOLOGY PARTNERS
           </motion.div>
+
           <motion.h2
             className="text-4xl md:text-5xl font-bold text-[#0F172A] mb-4"
             style={{ fontFamily: 'Manrope, sans-serif' }}
@@ -54,8 +71,9 @@ export function PartnerEcosystem() {
           >
             Trusted Ecosystem
           </motion.h2>
+
           <motion.p
-            className="text-xl text-[#334155] mb-8"
+            className="text-xl text-[#334155]"
             variants={fadeInUp}
           >
             Certified expertise across leading technology platforms
@@ -66,7 +84,7 @@ export function PartnerEcosystem() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
           {partners.map((partner, index) => (
             <motion.div
-              key={index}
+              key={partner.name}
               className="bg-white rounded-xl p-8 flex flex-col items-center justify-center shadow-sm border border-gray-100 cursor-pointer"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
