@@ -15,7 +15,7 @@ export function ClientSuccess() {
           viewport={{ once: true, amount: 0.3 }}
         >
           <motion.div
-            className="inline-block px-4 py-1 bg-[#615BEA]/10 rounded-full text-[#615BEA] text-sm font-semibold mb-4"
+            className="inline-block px-4 py-1 bg-[#3B82F6]/10 rounded-full text-[#3B82F6] text-sm font-semibold mb-4"
             variants={fadeInUp}
           >
             SUCCESS STORIES
@@ -36,12 +36,12 @@ export function ClientSuccess() {
         </motion.div>
 
         <motion.div
-          className="bg-gradient-to-br from-[#615BEA] to-[#7A71F0] rounded-2xl overflow-hidden shadow-2xl"
+          className="bg-gradient-to-br from-[#3B82F6] to-[#06B6D4] rounded-2xl overflow-hidden shadow-2xl"
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
-          whileHover={{ boxShadow: '0 30px 60px rgba(97, 91, 234, 0.4)' }}
+          whileHover={{ boxShadow: '0 30px 60px rgba(59, 130, 246, 0.4)' }}
         >
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Image */}
@@ -55,7 +55,7 @@ export function ClientSuccess() {
                 alt="Client Success"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#615BEA]/50 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#3B82F6]/50 to-transparent" />
             </motion.div>
 
             {/* Content */}
@@ -136,7 +136,7 @@ export function ClientSuccess() {
               >
                 <Button 
                   variant="outline"
-                  className="border-2 border-white text-white hover:bg-white hover:text-[#615BEA]"
+                  className="border-2 border-white text-white hover:bg-white hover:text-[#3B82F6]"
                 >
                   Read Full Case Study
                   <motion.div

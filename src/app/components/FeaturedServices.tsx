@@ -60,7 +60,7 @@ export function FeaturedServices() {
           viewport={{ once: true, amount: 0.3 }}
         >
           <motion.div
-            className="inline-block px-4 py-1 bg-[#615BEA]/10 rounded-full text-[#615BEA] text-sm font-semibold mb-4"
+            className="inline-block px-4 py-1 bg-[#3B82F6]/10 rounded-full text-[#3B82F6] text-sm font-semibold mb-4"
             variants={fadeInUp}
           >
             FEATURED OFFERINGS
@@ -113,11 +113,11 @@ export function FeaturedServices() {
               transition={{ duration: 0.5 }}
             >
               <motion.div
-                className="w-16 h-16 bg-[#615BEA]/10 rounded-xl flex items-center justify-center mb-6"
+                className="w-16 h-16 bg-[#3B82F6]/10 rounded-xl flex items-center justify-center mb-6"
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 transition={{ duration: 0.3 }}
               >
-                <ServiceIcon className="w-8 h-8 text-[#615BEA]" />
+                <ServiceIcon className="w-8 h-8 text-[#3B82F6]" />
               </motion.div>
               
               <h3 className="text-3xl font-bold text-[#0F172A] mb-4" style={{ fontFamily: 'Manrope, sans-serif' }}>
@@ -133,13 +133,13 @@ export function FeaturedServices() {
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.2 }}
               >
-                <span className="px-3 py-1 bg-[#615BEA]/10 text-[#615BEA] rounded-full text-sm font-medium">
+                <span className="px-3 py-1 bg-[#3B82F6]/10 text-[#3B82F6] rounded-full text-sm font-medium">
                   {currentService.platforms}
                 </span>
               </motion.div>
 
               <motion.div {...hoverButtonScale}>
-                <Button className="bg-[#615BEA] hover:bg-[#7A71F0] text-white shadow-lg shadow-[#615BEA]/30">
+                <Button className="bg-[#3B82F6] hover:bg-[#06B6D4] text-white shadow-lg shadow-[#3B82F6]/30">
                   Learn More
                 </Button>
               </motion.div>
@@ -155,7 +155,7 @@ export function FeaturedServices() {
           >
             <motion.button
               onClick={prevSlide}
-              className="w-10 h-10 rounded-full border-2 border-[#615BEA] text-[#615BEA] hover:bg-[#615BEA] hover:text-white transition-colors flex items-center justify-center"
+              className="w-10 h-10 rounded-full border-2 border-[#3B82F6] text-[#3B82F6] hover:bg-[#3B82F6] hover:text-white transition-colors flex items-center justify-center"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.2 }}
@@ -169,7 +169,7 @@ export function FeaturedServices() {
                   key={index}
                   onClick={() => setCurrentIndex(index)}
                   className={`rounded-full transition-all ${
-                    index === currentIndex ? 'bg-[#615BEA] w-8 h-2' : 'bg-gray-300 w-2 h-2'
+                    index === currentIndex ? 'bg-[#3B82F6] w-8 h-2' : 'bg-gray-300 w-2 h-2'
                   }`}
                   whileHover={{ scale: 1.2 }}
                   transition={{ duration: 0.2 }}
@@ -179,7 +179,7 @@ export function FeaturedServices() {
 
             <motion.button
               onClick={nextSlide}
-              className="w-10 h-10 rounded-full border-2 border-[#615BEA] text-[#615BEA] hover:bg-[#615BEA] hover:text-white transition-colors flex items-center justify-center"
+              className="w-10 h-10 rounded-full border-2 border-[#3B82F6] text-[#3B82F6] hover:bg-[#3B82F6] hover:text-white transition-colors flex items-center justify-center"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.2 }}

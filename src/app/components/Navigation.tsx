@@ -17,7 +17,7 @@ export function Navigation() {
   // Helper function to get active link styles
   const getLinkClass = (path: string) => {
     return isActive(path)
-      ? 'text-[#615BEA] font-semibold'
+      ? 'text-[#3B82F6] font-semibold'
       : 'text-[#334155]';
   };
 
@@ -82,7 +82,7 @@ export function Navigation() {
             <Link to="/about">
               <motion.div className="relative">
                 <motion.div
-                  className={`${getLinkClass('/about')} hover:text-[#615BEA] transition-colors`}
+                  className={`${getLinkClass('/about')} hover:text-[#3B82F6] transition-colors`}
                   whileHover={{ y: -2 }}
                   transition={{ duration: 0.2 }}
                 >
@@ -90,7 +90,7 @@ export function Navigation() {
                 </motion.div>
                 {isActive('/about') && (
                   <motion.div
-                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-[#615BEA] to-[#7A71F0]"
+                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-[#3B82F6] to-[#06B6D4]"
                     layoutId="underline"
                     transition={{ type: 'spring', stiffness: 380, damping: 40 }}
                   />
@@ -105,7 +105,7 @@ export function Navigation() {
               onMouseLeave={() => setServicesOpen(false)}
             >
               <motion.button
-                className="flex items-center gap-1 text-[#334155] hover:text-[#615BEA] transition-colors"
+                className="flex items-center gap-1 text-[#334155] hover:text-[#3B82F6] transition-colors"
                 whileHover={{ y: -2 }}
                 transition={{ duration: 0.2 }}
               >
@@ -132,7 +132,7 @@ export function Navigation() {
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: idx * 0.1 }}
                         >
-                          <h4 className="font-semibold text-[#615BEA] mb-3">
+                          <h4 className="font-semibold text-[#3B82F6] mb-3">
                             {pillar.category}
                           </h4>
                           <ul className="space-y-2">
@@ -142,7 +142,7 @@ export function Navigation() {
                                 whileHover={{ x: 4 }}
                                 transition={{ duration: 0.2 }}
                               >
-                                <a href="#" className="text-sm text-[#334155] hover:text-[#615BEA] transition-colors">
+                                <a href="#" className="text-sm text-[#334155] hover:text-[#3B82F6] transition-colors">
                                   {item}
                                 </a>
                               </motion.li>
@@ -159,7 +159,7 @@ export function Navigation() {
             <Link to="/industries">
               <motion.div className="relative">
                 <motion.div
-                  className={`${getLinkClass('/industries')} hover:text-[#615BEA] transition-colors`}
+                  className={`${getLinkClass('/industries')} hover:text-[#3B82F6] transition-colors`}
                   whileHover={{ y: -2 }}
                   transition={{ duration: 0.2 }}
                 >
@@ -167,7 +167,7 @@ export function Navigation() {
                 </motion.div>
                 {isActive('/industries') && (
                   <motion.div
-                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-[#615BEA] to-[#7A71F0]"
+                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-[#3B82F6] to-[#06B6D4]"
                     layoutId="underline"
                     transition={{ type: 'spring', stiffness: 380, damping: 40 }}
                   />
@@ -177,7 +177,7 @@ export function Navigation() {
             <Link to="/case-studies">
               <motion.div className="relative">
                 <motion.div
-                  className={`${getLinkClass('/case-studies')} hover:text-[#615BEA] transition-colors`}
+                  className={`${getLinkClass('/case-studies')} hover:text-[#3B82F6] transition-colors`}
                   whileHover={{ y: -2 }}
                   transition={{ duration: 0.2 }}
                 >
@@ -185,7 +185,7 @@ export function Navigation() {
                 </motion.div>
                 {isActive('/case-studies') && (
                   <motion.div
-                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-[#615BEA] to-[#7A71F0]"
+                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-[#3B82F6] to-[#06B6D4]"
                     layoutId="underline"
                     transition={{ type: 'spring', stiffness: 380, damping: 40 }}
                   />
@@ -195,7 +195,7 @@ export function Navigation() {
             <Link to="/careers">
               <motion.div className="relative">
                 <motion.div
-                  className={`${getLinkClass('/careers')} hover:text-[#615BEA] transition-colors`}
+                  className={`${getLinkClass('/careers')} hover:text-[#3B82F6] transition-colors`}
                   whileHover={{ y: -2 }}
                   transition={{ duration: 0.2 }}
                 >
@@ -203,7 +203,7 @@ export function Navigation() {
                 </motion.div>
                 {isActive('/careers') && (
                   <motion.div
-                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-[#615BEA] to-[#7A71F0]"
+                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-[#3B82F6] to-[#06B6D4]"
                     layoutId="underline"
                     transition={{ type: 'spring', stiffness: 380, damping: 40 }}
                   />
@@ -213,7 +213,7 @@ export function Navigation() {
             <Link to="/contact">
               <motion.div className="relative">
                 <motion.div
-                  className={`${getLinkClass('/contact')} hover:text-[#615BEA] transition-colors`}
+                  className={`${getLinkClass('/contact')} hover:text-[#3B82F6] transition-colors`}
                   whileHover={{ y: -2 }}
                   transition={{ duration: 0.2 }}
                 >
@@ -221,7 +221,7 @@ export function Navigation() {
                 </motion.div>
                 {isActive('/contact') && (
                   <motion.div
-                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-[#615BEA] to-[#7A71F0]"
+                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-[#3B82F6] to-[#06B6D4]"
                     layoutId="underline"
                     transition={{ type: 'spring', stiffness: 380, damping: 40 }}
                   />
@@ -237,7 +237,7 @@ export function Navigation() {
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.2 }}
             >
-              <Button className="bg-[#615BEA] hover:bg-[#7A71F0] text-white">
+              <Button className="bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] hover:from-[#1E3A8A] hover:to-[#0F766E] text-white">
                 Get a Free Tech Consultation
               </Button>
             </motion.div>
@@ -266,7 +266,7 @@ export function Navigation() {
                 <Link to="/about">
                   <motion.div className="relative">
                     <motion.div
-                      className={`${getLinkClass('/about')} hover:text-[#615BEA]`}
+                      className={`${getLinkClass('/about')} hover:text-[#3B82F6]`}
                       whileHover={{ x: 4 }}
                       transition={{ duration: 0.2 }}
                     >
@@ -274,7 +274,7 @@ export function Navigation() {
                     </motion.div>
                     {isActive('/about') && (
                       <motion.div
-                        className="h-0.5 bg-gradient-to-r from-[#615BEA] to-[#7A71F0] mt-1"
+                        className="h-0.5 bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] mt-1"
                         layoutId="mobileUnderline"
                         transition={{ type: 'spring', stiffness: 380, damping: 40 }}
                       />
@@ -284,7 +284,7 @@ export function Navigation() {
                 <Link to="/industries">
                   <motion.div className="relative">
                     <motion.div
-                      className={`${getLinkClass('/industries')} hover:text-[#615BEA]`}
+                      className={`${getLinkClass('/industries')} hover:text-[#3B82F6]`}
                       whileHover={{ x: 4 }}
                       transition={{ duration: 0.2 }}
                     >
@@ -292,7 +292,7 @@ export function Navigation() {
                     </motion.div>
                     {isActive('/industries') && (
                       <motion.div
-                        className="h-0.5 bg-gradient-to-r from-[#615BEA] to-[#7A71F0] mt-1"
+                        className="h-0.5 bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] mt-1"
                         layoutId="mobileUnderline"
                         transition={{ type: 'spring', stiffness: 380, damping: 40 }}
                       />
@@ -302,7 +302,7 @@ export function Navigation() {
                 <Link to="/case-studies">
                   <motion.div className="relative">
                     <motion.div
-                      className={`${getLinkClass('/case-studies')} hover:text-[#615BEA]`}
+                      className={`${getLinkClass('/case-studies')} hover:text-[#3B82F6]`}
                       whileHover={{ x: 4 }}
                       transition={{ duration: 0.2 }}
                     >
@@ -310,7 +310,7 @@ export function Navigation() {
                     </motion.div>
                     {isActive('/case-studies') && (
                       <motion.div
-                        className="h-0.5 bg-gradient-to-r from-[#615BEA] to-[#7A71F0] mt-1"
+                        className="h-0.5 bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] mt-1"
                         layoutId="mobileUnderline"
                         transition={{ type: 'spring', stiffness: 380, damping: 40 }}
                       />
@@ -320,7 +320,7 @@ export function Navigation() {
                 <Link to="/careers">
                   <motion.div className="relative">
                     <motion.div
-                      className={`${getLinkClass('/careers')} hover:text-[#615BEA]`}
+                      className={`${getLinkClass('/careers')} hover:text-[#3B82F6]`}
                       whileHover={{ x: 4 }}
                       transition={{ duration: 0.2 }}
                     >
@@ -328,7 +328,7 @@ export function Navigation() {
                     </motion.div>
                     {isActive('/careers') && (
                       <motion.div
-                        className="h-0.5 bg-gradient-to-r from-[#615BEA] to-[#7A71F0] mt-1"
+                        className="h-0.5 bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] mt-1"
                         layoutId="mobileUnderline"
                         transition={{ type: 'spring', stiffness: 380, damping: 40 }}
                       />
@@ -338,7 +338,7 @@ export function Navigation() {
                 <Link to="/contact">
                   <motion.div className="relative">
                     <motion.div
-                      className={`${getLinkClass('/contact')} hover:text-[#615BEA]`}
+                      className={`${getLinkClass('/contact')} hover:text-[#3B82F6]`}
                       whileHover={{ x: 4 }}
                       transition={{ duration: 0.2 }}
                     >
@@ -346,7 +346,7 @@ export function Navigation() {
                     </motion.div>
                     {isActive('/contact') && (
                       <motion.div
-                        className="h-0.5 bg-gradient-to-r from-[#615BEA] to-[#7A71F0] mt-1"
+                        className="h-0.5 bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] mt-1"
                         layoutId="mobileUnderline"
                         transition={{ type: 'spring', stiffness: 380, damping: 40 }}
                       />
@@ -358,7 +358,7 @@ export function Navigation() {
                   whileTap={{ scale: 0.98 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <Button className="bg-[#615BEA] hover:bg-[#7A71F0] text-white w-full">
+                  <Button className="bg-[#3B82F6] hover:bg-[#06B6D4] text-white w-full">
                     Get a Free Tech Consultation
                   </Button>
                 </motion.div>

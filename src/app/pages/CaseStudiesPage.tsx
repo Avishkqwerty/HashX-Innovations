@@ -19,7 +19,7 @@ export function CaseStudiesPage() {
         metric4: 'Zero security incidents'
       },
       icon: Shield,
-      color: '#615BEA'
+      color: '#3B82F6'
     },
     {
       industry: 'Healthcare',
@@ -143,7 +143,7 @@ export function CaseStudiesPage() {
             animate="visible"
           >
             <motion.div
-              className="inline-block px-4 py-1 bg-[#615BEA]/10 rounded-full text-[#615BEA] text-sm font-semibold mb-6"
+              className="inline-block px-4 py-1 bg-[#3B82F6]/10 rounded-full text-[#3B82F6] text-sm font-semibold mb-6"
               variants={fadeInUp}
             >
               CASE STUDIES
@@ -156,7 +156,7 @@ export function CaseStudiesPage() {
             >
               Driving Real Results
               <br />
-              <span className="text-[#615BEA]">for Real Businesses</span>
+              <span className="text-[#3B82F6]">for Real Businesses</span>
             </motion.h1>
             
             <motion.p
@@ -200,12 +200,12 @@ export function CaseStudiesPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1, duration: 0.5 }}
-                  whileHover={{ scale: 1.05, borderColor: '#615BEA' }}
+                  whileHover={{ scale: 1.05, borderColor: '#3B82F6' }}
                 >
-                  <div className="absolute -top-4 -left-4 w-10 h-10 bg-[#615BEA] text-white rounded-full flex items-center justify-center font-bold text-lg">
+                  <div className="absolute -top-4 -left-4 w-10 h-10 bg-[#3B82F6] text-white rounded-full flex items-center justify-center font-bold text-lg">
                     {index + 1}
                   </div>
-                  <Icon className="w-12 h-12 text-[#615BEA] mb-4" />
+                  <Icon className="w-12 h-12 text-[#3B82F6] mb-4" />
                   <h3 className="text-xl font-bold text-[#0F172A] mb-3">
                     {phase.phase}
                   </h3>
@@ -247,7 +247,7 @@ export function CaseStudiesPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1, duration: 0.6 }}
-                  whileHover={{ boxShadow: '0 30px 60px rgba(97, 91, 234, 0.15)' }}
+                  whileHover={{ boxShadow: '0 30px 60px rgba(59, 130, 246, 0.15)' }}
                 >
                   <div className="grid lg:grid-cols-2 gap-8 p-8 md:p-10">
                     <div>

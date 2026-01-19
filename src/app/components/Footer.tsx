@@ -135,14 +135,14 @@ export function Footer() {
                     {link.isRoute ? (
                       <Link
                         to={link.href}
-                        className="text-sm text-gray-400 hover:text-[#615BEA] transition-colors"
+                        className="text-sm text-gray-400 hover:text-[#3B82F6] transition-colors"
                       >
                         {link.label}
                       </Link>
                     ) : (
                       <a 
                         href={link.href}
-                        className="text-sm text-gray-400 hover:text-[#615BEA] transition-colors"
+                        className="text-sm text-gray-400 hover:text-[#3B82F6] transition-colors"
                       >
                         {link.label}
                       </a>
@@ -177,7 +177,7 @@ export function Footer() {
                 <motion.a
                   key={idx}
                   href={social.href}
-                  className="w-9 h-9 rounded-full bg-gray-800 hover:bg-[#615BEA] flex items-center justify-center transition-colors"
+                  className="w-9 h-9 rounded-full bg-gray-800 hover:bg-[#3B82F6] flex items-center justify-center transition-colors"
                   whileHover={{ scale: 1.2, rotate: 10 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.2 }}

@@ -30,7 +30,7 @@ export function ContactPage() {
       icon: MapPin,
       title: 'Head Office',
       content: '123 Tech Avenue, Colombo 03, Sri Lanka',
-      color: '#615BEA'
+      color: '#3B82F6'
     },
     {
       icon: Mail,
@@ -71,7 +71,7 @@ export function ContactPage() {
             animate="visible"
           >
             <motion.div
-              className="inline-block px-4 py-1 bg-[#615BEA]/10 rounded-full text-[#615BEA] text-sm font-semibold mb-6"
+              className="inline-block px-4 py-1 bg-[#3B82F6]/10 rounded-full text-[#3B82F6] text-sm font-semibold mb-6"
               variants={fadeInUp}
             >
               CONTACT US
@@ -168,7 +168,7 @@ export function ContactPage() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-[#615BEA] focus:ring-2 focus:ring-[#615BEA]/20 outline-none transition-all"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-[#3B82F6] focus:ring-2 focus:ring-[#3B82F6]/20 outline-none transition-all"
                       placeholder="Your name"
                     />
                   </div>
@@ -184,7 +184,7 @@ export function ContactPage() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-[#615BEA] focus:ring-2 focus:ring-[#615BEA]/20 outline-none transition-all"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-[#3B82F6] focus:ring-2 focus:ring-[#3B82F6]/20 outline-none transition-all"
                       placeholder="your.email@example.com"
                     />
                   </div>
@@ -200,7 +200,7 @@ export function ContactPage() {
                       value={formData.subject}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-[#615BEA] focus:ring-2 focus:ring-[#615BEA]/20 outline-none transition-all"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-[#3B82F6] focus:ring-2 focus:ring-[#3B82F6]/20 outline-none transition-all"
                       placeholder="What's this about?"
                     />
                   </div>
@@ -216,7 +216,7 @@ export function ContactPage() {
                       onChange={handleChange}
                       required
                       rows={6}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-[#615BEA] focus:ring-2 focus:ring-[#615BEA]/20 outline-none transition-all resize-none"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-[#3B82F6] focus:ring-2 focus:ring-[#3B82F6]/20 outline-none transition-all resize-none"
                       placeholder="Tell us more about your inquiry..."
                     />
                   </div>
@@ -227,7 +227,7 @@ export function ContactPage() {
                   >
                     <Button 
                       type="submit"
-                      className="w-full bg-[#615BEA] hover:bg-[#7A71F0] text-white text-lg py-6"
+                      className="w-full bg-[#3B82F6] hover:bg-[#1E3A8A] text-white text-lg py-6"
                     >
                       Send Message
                       <Send className="ml-2 w-5 h-5" />
@@ -246,7 +246,7 @@ export function ContactPage() {
               className="space-y-8"
             >
               {/* Social Media */}
-              <div className="bg-gradient-to-br from-[#615BEA] to-[#7A71F0] rounded-3xl p-8 md:p-10 text-white">
+              <div className="bg-gradient-to-br from-[#3B82F6] to-[#06B6D4] rounded-3xl p-8 md:p-10 text-white">
                 <h3 className="text-2xl md:text-3xl font-bold mb-4" style={{ fontFamily: 'Manrope, sans-serif' }}>
                   Connect With Us
                 </h3>
@@ -289,7 +289,7 @@ export function ContactPage() {
                 <div className="space-y-3">
                   <motion.a
                     href="tel:+94112345678"
-                    className="flex items-center gap-3 text-[#615BEA] font-semibold hover:text-[#7A71F0] transition-colors"
+                    className="flex items-center gap-3 text-[#3B82F6] font-semibold hover:text-[#1E3A8A] transition-colors"
                     whileHover={{ x: 5 }}
                   >
                     <Phone className="w-5 h-5" />
@@ -297,7 +297,7 @@ export function ContactPage() {
                   </motion.a>
                   <motion.a
                     href="mailto:contact@hashx.live"
-                    className="flex items-center gap-3 text-[#615BEA] font-semibold hover:text-[#7A71F0] transition-colors"
+                    className="flex items-center gap-3 text-[#3B82F6] font-semibold hover:text-[#1E3A8A] transition-colors"
                     whileHover={{ x: 5 }}
                   >
                     <Mail className="w-5 h-5" />

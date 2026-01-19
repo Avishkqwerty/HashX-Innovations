@@ -40,7 +40,7 @@ export function CareersPage() {
             animate="visible"
           >
             <motion.div
-              className="inline-block px-4 py-1 bg-[#615BEA]/10 rounded-full text-[#615BEA] text-sm font-semibold mb-6"
+              className="inline-block px-4 py-1 bg-[#3B82F6]/10 rounded-full text-[#3B82F6] text-sm font-semibold mb-6"
               variants={fadeInUp}
             >
               JOIN OUR TEAM
@@ -53,7 +53,7 @@ export function CareersPage() {
             >
               Build the Future
               <br />
-              <span className="text-[#615BEA]">With Us</span>
+              <span className="text-[#3B82F6]">With Us</span>
             </motion.h1>
             
             <motion.p
@@ -73,7 +73,7 @@ export function CareersPage() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <Button className="bg-[#615BEA] hover:bg-[#7A71F0] text-white text-lg px-8 py-6">
+                  <Button className="bg-[#3B82F6] hover:bg-[#1E3A8A] text-white text-lg px-8 py-6">
                     Contact Us
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
@@ -114,12 +114,12 @@ export function CareersPage() {
                   transition={{ delay: index * 0.1, duration: 0.5 }}
                   whileHover={{ 
                     scale: 1.02,
-                    boxShadow: '0 10px 30px rgba(97, 91, 234, 0.15)'
+                    boxShadow: '0 10px 30px rgba(59, 130, 246, 0.15)'
                   }}
                 >
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-[#615BEA]/10 rounded-xl flex items-center justify-center">
-                      <Icon className="w-8 h-8 text-[#615BEA]" />
+                    <div className="w-16 h-16 bg-[#3B82F6]/10 rounded-xl flex items-center justify-center">
+                      <Icon className="w-8 h-8 text-[#3B82F6]" />
                     </div>
                   </div>
                   <div>

@@ -9,8 +9,8 @@ export function IndustriesPage() {
     {
       name: 'Finance & Banking',
       icon: Building2,
-      color: '#615BEA',
-      lightColor: '#615BEA15',
+      color: '#3B82F6',
+      lightColor: '#3B82F615',
       description: 'Transform financial operations with secure, scalable solutions that streamline payments, enhance customer experiences, and ensure compliance. Our platforms help banks and fintech companies leverage AI and cloud technology to drive growth, reduce risk, and stay ahead in a competitive landscape.',
       benefits: ['Secure Transactions', 'Regulatory Compliance', 'Real-time Analytics']
     },
@@ -107,7 +107,7 @@ export function IndustriesPage() {
             animate="visible"
           >
             <motion.div
-              className="inline-block px-4 py-1 bg-[#615BEA]/10 rounded-full text-[#615BEA] text-sm font-semibold mb-6"
+              className="inline-block px-4 py-1 bg-[#3B82F6]/10 rounded-full text-[#3B82F6] text-sm font-semibold mb-6"
               variants={fadeInUp}
             >
               INDUSTRIES WE SERVE
@@ -120,7 +120,7 @@ export function IndustriesPage() {
             >
               Transforming Industries
               <br />
-              <span className="text-[#615BEA]">Through Innovation</span>
+              <span className="text-[#3B82F6]">Through Innovation</span>
             </motion.h1>
             
             <motion.p
@@ -246,7 +246,7 @@ export function IndustriesPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1, duration: 0.5 }}
-                  whileHover={{ scale: 1.05, borderColor: '#615BEA', boxShadow: '0 10px 30px rgba(97, 91, 234, 0.15)' }}
+                  whileHover={{ scale: 1.05, borderColor: '#3B82F6', boxShadow: '0 10px 30px rgba(59, 130, 246, 0.15)' }}
                 >
                   <Icon className="w-12 h-12 text-[#615BEA] mb-4" />
                   <h3 className="text-xl font-bold text-[#0F172A] mb-2">
@@ -265,7 +265,7 @@ export function IndustriesPage() {
       {/* Industry Expertise Stats */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-gradient-to-r from-[#615BEA] to-[#7A71F0] rounded-3xl p-12 md:p-16 shadow-2xl">
+              <div className="bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] rounded-3xl p-12 md:p-16 shadow-2xl">
             <motion.div
               className="grid md:grid-cols-4 gap-8 text-white text-center"
               variants={staggerContainer}

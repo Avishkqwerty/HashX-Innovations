@@ -121,7 +121,7 @@ export function PrivacyPolicyPage() {
             animate="visible"
           >
             <motion.div
-              className="inline-block px-4 py-1 bg-[#615BEA]/10 rounded-full text-[#615BEA] text-sm font-semibold mb-6"
+              className="inline-block px-4 py-1 bg-[#3B82F6]/10 rounded-full text-[#3B82F6] text-sm font-semibold mb-6"
               variants={fadeInUp}
             >
               PRIVACY POLICY
@@ -134,7 +134,7 @@ export function PrivacyPolicyPage() {
             >
               Your Privacy
               <br />
-              <span className="text-[#615BEA]">Our Priority</span>
+              <span className="text-[#3B82F6]">Our Priority</span>
             </motion.h1>
             
             <motion.p
@@ -171,8 +171,8 @@ export function PrivacyPolicyPage() {
                   transition={{ delay: idx * 0.1, duration: 0.5 }}
                 >
                   <div className="flex items-center gap-4 mb-8">
-                    <div className="w-12 h-12 bg-[#615BEA]/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-6 h-6 text-[#615BEA]" />
+                    <div className="w-12 h-12 bg-[#3B82F6]/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Icon className="w-6 h-6 text-[#3B82F6]" />
                     </div>
                     <h2 className="text-2xl md:text-3xl font-bold text-[#0F172A]">
                       {section.title}
@@ -237,7 +237,7 @@ export function PrivacyPolicyPage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
           <motion.div
-            className="bg-gradient-to-br from-[#615BEA] to-[#7A71F0] rounded-3xl p-12 text-center text-white shadow-2xl"
+            className="bg-gradient-to-br from-[#3B82F6] to-[#06B6D4] rounded-3xl p-12 text-center text-white shadow-2xl"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -251,7 +251,7 @@ export function PrivacyPolicyPage() {
             </p>
             <Link to="/contact">
               <motion.button
-                className="bg-white text-[#615BEA] hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors"
+                className="bg-white text-[#3B82F6] hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >

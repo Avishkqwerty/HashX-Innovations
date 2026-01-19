@@ -22,7 +22,7 @@ export function AboutPage() {
       icon: Users,
       title: 'Client-Focused',
       description: 'Your success is our success. We partner with you to understand and exceed your expectations.',
-      color: '#615BEA'
+      color: '#3B82F6'
     },
     {
       icon: Award,
@@ -36,7 +36,7 @@ export function AboutPage() {
     {
       name: 'Avishka Bandara',
       role: 'Director CEO',
-      image: 'https://ui-avatars.com/api/?name=Avishka+Bandara&size=256&background=615BEA&color=fff&bold=true',
+      image: 'https://ui-avatars.com/api/?name=Avishka+Bandara&size=256&background=3B82F6&color=fff&bold=true',
       bio: 'Visionary leader driving innovation and excellence in enterprise technology solutions'
     }
   ];
@@ -53,7 +53,7 @@ export function AboutPage() {
             animate="visible"
           >
             <motion.div
-              className="inline-block px-4 py-1 bg-[#615BEA]/10 rounded-full text-[#615BEA] text-sm font-semibold mb-6"
+              className="inline-block px-4 py-1 bg-[#3B82F6]/10 rounded-full text-[#3B82F6] text-sm font-semibold mb-6"
               variants={fadeInUp}
             >
               ABOUT US
@@ -66,7 +66,7 @@ export function AboutPage() {
             >
               Innovating the Future
               <br />
-              <span className="text-[#615BEA]">of Enterprise Technology</span>
+              <span className="text-[#3B82F6]">of Enterprise Technology</span>
             </motion.h1>
             
             <motion.p
@@ -120,10 +120,10 @@ export function AboutPage() {
               transition={{ duration: 0.6 }}
             >
               <motion.div
-                className="bg-gradient-to-br from-[#615BEA]/10 to-[#615BEA]/5 rounded-2xl p-6 border border-[#615BEA]/20"
-                whileHover={{ scale: 1.05, borderColor: '#615BEA' }}
+                className="bg-gradient-to-br from-[#3B82F6]/10 to-[#3B82F6]/5 rounded-2xl p-6 border border-[#3B82F6]/20"
+                whileHover={{ scale: 1.05, borderColor: '#3B82F6' }}
               >
-                <div className="text-4xl font-bold text-[#615BEA] mb-2">500+</div>
+                <div className="text-4xl font-bold text-[#3B82F6] mb-2">500+</div>
                 <div className="text-[#334155] font-semibold">Projects Delivered</div>
               </motion.div>
               <motion.div
@@ -212,7 +212,7 @@ export function AboutPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8">
             <motion.div
-              className="bg-gradient-to-br from-[#615BEA] to-[#7A71F0] rounded-3xl p-10 text-white"
+              className="bg-gradient-to-br from-[#3B82F6] to-[#06B6D4] rounded-3xl p-10 text-white"
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
