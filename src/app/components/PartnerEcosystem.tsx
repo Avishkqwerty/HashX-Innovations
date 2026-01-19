@@ -27,6 +27,10 @@ export function PartnerEcosystem() {
       name: 'Palo Alto Networks',
       logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8wjsl4BMgWMITv6_NrJbgA0HKUrFwcNdWPQ&s'
     },
+ <center></>   {
+      name: 'OREL Cloud',
+      logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe_Fta4J12ZRSb7LtrGuhMskjeLXyPNJO8jQ&s'
+    },
     {
       name: 'Sophos',
       logo: 'https://logos-world.net/wp-content/uploads/2024/07/Sophos-Logo.png'
@@ -35,23 +39,15 @@ export function PartnerEcosystem() {
       name: 'Microsoft Azure',
       logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Microsoft_Azure_Logo.svg/1280px-Microsoft_Azure_Logo.svg.png'
     },
-
-    // ⬇️ Centered row starts here
-    {
-      name: 'Oracle Cloud',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg'
-    },
     {
       name: 'Zoho',
       logo: 'https://www.zoho.com/sites/zweb/images/zoho_general_pages/zoho-logo-512.png'
-    },
+    }
     {
       name: 'Fortinet',
       logo: 'https://upload.wikimedia.org/wikipedia/commons/6/62/Fortinet_logo.svg'
-    }
+    }</center>
   ];
-
-  const centeredStartIndex = partners.length - 3;
 
   return (
     <section className="py-24 bg-gradient-to-b from-[#FAFAFF] to-white">
@@ -74,6 +70,7 @@ export function PartnerEcosystem() {
 
           <motion.h2
             className="text-4xl md:text-5xl font-bold text-[#0F172A] mb-4"
+            style={{ fontFamily: 'Manrope, sans-serif' }}
             variants={fadeInUp}
           >
             Trusted Ecosystem
@@ -92,9 +89,7 @@ export function PartnerEcosystem() {
           {partners.map((partner, index) => (
             <motion.div
               key={partner.name}
-              className={`bg-white rounded-xl p-8 flex flex-col items-center justify-center shadow-sm border border-gray-100 cursor-pointer
-                ${index === centeredStartIndex ? 'lg:col-start-2' : ''}
-              `}
+              className="bg-white rounded-xl p-8 flex flex-col items-center justify-center shadow-sm border border-gray-100 cursor-pointer"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
@@ -135,10 +130,11 @@ export function PartnerEcosystem() {
         >
           <motion.div
             className="inline-flex items-center gap-3 px-6 py-4 bg-gradient-to-r from-[#10B981]/10 to-[#10B981]/5 rounded-full border border-[#10B981]/20"
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.05, borderColor: 'rgba(16, 185, 129, 0.5)' }}
+            transition={{ duration: 0.3 }}
           >
             <motion.div
-              className="w-3 h-3 bg-[#10B981] rounded-full"
+              className="w-3 h-3 bg-[#10B981] rounded-full shadow-lg shadow-[#10B981]/50"
               animate={{ scale: [1, 1.2, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
             />
