@@ -104,12 +104,12 @@ export function Footer() {
             >
               <motion.div className="flex items-start gap-3 text-sm text-gray-400" variants={listItem}>
                 <MapPin className="w-4 h-4 mt-0.5" />
-                <span>501/C,Lotus Dr,Halbarawa Gardens, Malabe</span>
+                <span>123 Tech Avenue, Colombo 03, Sri Lanka</span>
               </motion.div>
 
               <motion.div className="flex items-center gap-3 text-sm text-gray-400" variants={listItem}>
                 <Phone className="w-4 h-4" />
-                <span>+94 70 1111 440</span>
+                <span>+94 11 234 5678</span>
               </motion.div>
 
               <motion.div className="flex items-center gap-3 text-sm text-gray-400" variants={listItem}>
