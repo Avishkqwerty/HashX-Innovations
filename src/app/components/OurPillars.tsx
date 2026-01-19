@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Code, Shield, Cloud, Zap, ChevronRight } from 'lucide-react';
+import { staggerContainer, fadeInUp, listContainer, listItem } from '@/lib/animations';
 
 export function OurPillars() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -55,17 +56,33 @@ export function OurPillars() {
   return (
     <section className="py-24 bg-gradient-to-b from-[#FAFAFF] to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-20">
-          <div className="inline-block px-4 py-1 bg-[#615BEA]/10 rounded-full text-[#615BEA] text-sm font-semibold mb-4">
+        <motion.div
+          className="text-center mb-20"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <motion.div
+            className="inline-block px-4 py-1 bg-[#615BEA]/10 rounded-full text-[#615BEA] text-sm font-semibold mb-4"
+            variants={fadeInUp}
+          >
             OUR CAPABILITIES
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#0F172A] mb-4" style={{ fontFamily: 'Manrope, sans-serif' }}>
+          </motion.div>
+          <motion.h2
+            className="text-4xl md:text-5xl font-bold text-[#0F172A] mb-4"
+            style={{ fontFamily: 'Manrope, sans-serif' }}
+            variants={fadeInUp}
+          >
             Four Core Pillars of Excellence
-          </h2>
-          <p className="text-xl text-[#334155] max-w-3xl mx-auto">
+          </motion.h2>
+          <motion.p
+            className="text-xl text-[#334155] max-w-3xl mx-auto"
+            variants={fadeInUp}
+          >
             Comprehensive technology solutions that drive digital transformation
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {pillars.map((pillar, index) => (
@@ -74,15 +91,20 @@ export function OurPillars() {
               className="relative bg-white rounded-xl p-6 cursor-pointer border-2 border-transparent hover:border-[#615BEA] transition-all shadow-md"
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
-              whileHover={{ y: -8 }}
-              transition={{ duration: 0.3 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -8, boxShadow: '0 20px 40px rgba(0, 0, 0, 0.1)' }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
             >
-              <div 
+              <motion.div 
                 className="w-12 h-12 rounded-lg flex items-center justify-center mb-4"
                 style={{ backgroundColor: `${pillar.color}20` }}
+                whileHover={{ scale: 1.15, rotate: -5 }}
+                transition={{ duration: 0.3 }}
               >
                 <pillar.icon className="w-6 h-6" style={{ color: pillar.color }} />
-              </div>
+              </motion.div>
 
               <h3 className="text-2xl font-bold mb-2" style={{ color: pillar.color, fontFamily: 'Manrope, sans-serif' }}>
                 {pillar.title}
@@ -100,14 +122,28 @@ export function OurPillars() {
                 className="overflow-hidden"
               >
                 <div className="pt-4 border-t border-gray-200">
-                  <ul className="space-y-2">
+                  <motion.ul
+                    className="space-y-2"
+                    variants={listContainer}
+                    initial="hidden"
+                    animate={hoveredIndex === index ? 'visible' : 'hidden'}
+                  >
                     {pillar.services.map((service, idx) => (
-                      <li key={idx} className="flex items-start gap-2 text-sm text-[#334155]">
-                        <ChevronRight className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: pillar.color }} />
+                      <motion.li
+                        key={idx}
+                        className="flex items-start gap-2 text-sm text-[#334155]"
+                        variants={listItem}
+                      >
+                        <motion.div
+                          whileHover={{ x: 4 }}
+                          transition={{ duration: 0.2 }}
+                        >
+                          <ChevronRight className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: pillar.color }} />
+                        </motion.div>
                         <span>{service}</span>
-                      </li>
+                      </motion.li>
                     ))}
-                  </ul>
+                  </motion.ul>
                 </div>
               </motion.div>
             </motion.div>

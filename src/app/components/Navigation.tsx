@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from '@/app/components/ui/button';
 import Logo from '@/assets/logo.png';
+import { slideDown } from '@/lib/animations';
 
 export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -53,18 +55,26 @@ export function Navigation() {
 
           {/* Logo */}
           <div className="flex items-center">
-            <img
+            <motion.img
               src={Logo}
               alt="HashX Innovations Logo"
-              className="h-14 lg:h-16 w-auto object-contain"
+              className="h-14 lg:h-16 w-auto object-contain cursor-pointer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.2 }}
             />
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
-            <a href="#about" className="text-[#334155] hover:text-[#615BEA] transition-colors">
+            <motion.a
+              href="#about"
+              className="text-[#334155] hover:text-[#615BEA] transition-colors"
+              whileHover={{ y: -2 }}
+              transition={{ duration: 0.2 }}
+            >
               About
-            </a>
+            </motion.a>
 
             {/* Services Mega Menu */}
             <div
@@ -72,54 +82,103 @@ export function Navigation() {
               onMouseEnter={() => setServicesOpen(true)}
               onMouseLeave={() => setServicesOpen(false)}
             >
-              <button className="flex items-center gap-1 text-[#334155] hover:text-[#615BEA] transition-colors">
+              <motion.button
+                className="flex items-center gap-1 text-[#334155] hover:text-[#615BEA] transition-colors"
+                whileHover={{ y: -2 }}
+                transition={{ duration: 0.2 }}
+              >
                 Services
-                <ChevronDown className="w-4 h-4" />
-              </button>
+                <motion.div animate={{ rotate: servicesOpen ? 180 : 0 }} transition={{ duration: 0.3 }}>
+                  <ChevronDown className="w-4 h-4" />
+                </motion.div>
+              </motion.button>
 
-              {servicesOpen && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[800px] bg-white rounded-lg shadow-xl border border-gray-200 p-8">
-                  <div className="grid grid-cols-4 gap-6">
-                    {services.map((pillar) => (
-                      <div key={pillar.category}>
-                        <h4 className="font-semibold text-[#615BEA] mb-3">
-                          {pillar.category}
-                        </h4>
-                        <ul className="space-y-2">
-                          {pillar.items.map((item) => (
-                            <li key={item}>
-                              <a href="#" className="text-sm text-[#334155] hover:text-[#615BEA] transition-colors">
-                                {item}
-                              </a>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
+              <AnimatePresence>
+                {servicesOpen && (
+                  <motion.div
+                    className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[800px] bg-white rounded-lg shadow-xl border border-gray-200 p-8"
+                    variants={slideDown}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                  >
+                    <div className="grid grid-cols-4 gap-6">
+                      {services.map((pillar, idx) => (
+                        <motion.div
+                          key={pillar.category}
+                          initial={{ opacity: 0, y: -10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: idx * 0.1 }}
+                        >
+                          <h4 className="font-semibold text-[#615BEA] mb-3">
+                            {pillar.category}
+                          </h4>
+                          <ul className="space-y-2">
+                            {pillar.items.map((item) => (
+                              <motion.li
+                                key={item}
+                                whileHover={{ x: 4 }}
+                                transition={{ duration: 0.2 }}
+                              >
+                                <a href="#" className="text-sm text-[#334155] hover:text-[#615BEA] transition-colors">
+                                  {item}
+                                </a>
+                              </motion.li>
+                            ))}
+                          </ul>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
 
-            <a href="#industries" className="text-[#334155] hover:text-[#615BEA] transition-colors">
+            <motion.a
+              href="#industries"
+              className="text-[#334155] hover:text-[#615BEA] transition-colors"
+              whileHover={{ y: -2 }}
+              transition={{ duration: 0.2 }}
+            >
               Industries
-            </a>
-            <a href="#case-studies" className="text-[#334155] hover:text-[#615BEA] transition-colors">
+            </motion.a>
+            <motion.a
+              href="#case-studies"
+              className="text-[#334155] hover:text-[#615BEA] transition-colors"
+              whileHover={{ y: -2 }}
+              transition={{ duration: 0.2 }}
+            >
               Case Studies
-            </a>
-            <a href="#careers" className="text-[#334155] hover:text-[#615BEA] transition-colors">
+            </motion.a>
+            <motion.a
+              href="#careers"
+              className="text-[#334155] hover:text-[#615BEA] transition-colors"
+              whileHover={{ y: -2 }}
+              transition={{ duration: 0.2 }}
+            >
               Careers
-            </a>
-            <a href="#contact" className="text-[#334155] hover:text-[#615BEA] transition-colors">
+            </motion.a>
+            <motion.a
+              href="#contact"
+              className="text-[#334155] hover:text-[#615BEA] transition-colors"
+              whileHover={{ y: -2 }}
+              transition={{ duration: 0.2 }}
+            >
               Contact
-            </a>
+            </motion.a>
           </div>
 
           {/* CTA Button */}
           <div className="hidden lg:block">
-            <Button className="bg-[#615BEA] hover:bg-[#7A71F0] text-white">
-              Get a Free Tech Consultation
-            </Button>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.2 }}
+            >
+              <Button className="bg-[#615BEA] hover:bg-[#7A71F0] text-white">
+                Get a Free Tech Consultation
+              </Button>
+            </motion.div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -132,20 +191,69 @@ export function Navigation() {
         </div>
 
         {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-gray-200">
-            <div className="flex flex-col space-y-4">
-              <a href="#about" className="text-[#334155] hover:text-[#615BEA]">About</a>
-              <a href="#industries" className="text-[#334155] hover:text-[#615BEA]">Industries</a>
-              <a href="#case-studies" className="text-[#334155] hover:text-[#615BEA]">Case Studies</a>
-              <a href="#careers" className="text-[#334155] hover:text-[#615BEA]">Careers</a>
-              <a href="#contact" className="text-[#334155] hover:text-[#615BEA]">Contact</a>
-              <Button className="bg-[#615BEA] hover:bg-[#7A71F0] text-white w-full">
-                Get a Free Tech Consultation
-              </Button>
-            </div>
-          </div>
-        )}
+        <AnimatePresence>
+          {mobileMenuOpen && (
+            <motion.div
+              className="lg:hidden py-4 border-t border-gray-200"
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="flex flex-col space-y-4">
+                <motion.a
+                  href="#about"
+                  className="text-[#334155] hover:text-[#615BEA]"
+                  whileHover={{ x: 4 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  About
+                </motion.a>
+                <motion.a
+                  href="#industries"
+                  className="text-[#334155] hover:text-[#615BEA]"
+                  whileHover={{ x: 4 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  Industries
+                </motion.a>
+                <motion.a
+                  href="#case-studies"
+                  className="text-[#334155] hover:text-[#615BEA]"
+                  whileHover={{ x: 4 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  Case Studies
+                </motion.a>
+                <motion.a
+                  href="#careers"
+                  className="text-[#334155] hover:text-[#615BEA]"
+                  whileHover={{ x: 4 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  Careers
+                </motion.a>
+                <motion.a
+                  href="#contact"
+                  className="text-[#334155] hover:text-[#615BEA]"
+                  whileHover={{ x: 4 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  Contact
+                </motion.a>
+                <motion.div
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <Button className="bg-[#615BEA] hover:bg-[#7A71F0] text-white w-full">
+                    Get a Free Tech Consultation
+                  </Button>
+                </motion.div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </nav>
   );
