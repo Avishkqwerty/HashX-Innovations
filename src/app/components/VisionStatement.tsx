@@ -77,7 +77,7 @@ export function VisionStatement() {
           style={{ fontFamily: 'Manrope, sans-serif' }}
           variants={fadeInUp}
         >
-          At HashX Innovations, we don't just write code — we architect resilience, intelligence, and growth.
+          At HashX Innovations, we don't just write code we architect resilience, intelligence, and growth.
         </motion.h2>
 
         <motion.p
