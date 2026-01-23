@@ -29,13 +29,13 @@ export function ContactPage() {
     {
       icon: MapPin,
       title: 'Head Office',
-      content: '123 Tech Avenue, Colombo 03, Sri Lanka',
+      content: 'Junction, 310/1, Kaduwela Rd, Battaramulla',
       color: '#3B82F6'
     },
     {
       icon: Mail,
       title: 'Email Us',
-      content: 'contact@hashx.live',
+      content: 'service@hashxinnovations.com',
       color: '#10B981'
     },
     {
