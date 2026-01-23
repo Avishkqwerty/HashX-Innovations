@@ -132,11 +132,9 @@ export function Navigation() {
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: idx * 0.1 }}
                         >
-                          <Link to={`/services#${pillar.category.toLowerCase()}`}>
-                            <h4 className="font-semibold text-[#3B82F6] mb-3 hover:underline cursor-pointer">
-                              {pillar.category}
-                            </h4>
-                          </Link>
+                          <h4 className="font-semibold text-[#3B82F6] mb-3">
+                            {pillar.category}
+                          </h4>
                           <ul className="space-y-2">
                             {pillar.items.map((item) => (
                               <motion.li
@@ -144,9 +142,9 @@ export function Navigation() {
                                 whileHover={{ x: 4 }}
                                 transition={{ duration: 0.2 }}
                               >
-                                <Link to={`/services#${pillar.category.toLowerCase()}`} className="text-sm text-[#334155] hover:text-[#3B82F6] transition-colors">
+                                <a href="#" className="text-sm text-[#334155] hover:text-[#3B82F6] transition-colors">
                                   {item}
-                                </Link>
+                                </a>
                               </motion.li>
                             ))}
                           </ul>
@@ -283,25 +281,6 @@ export function Navigation() {
                     )}
                   </motion.div>
                 </Link>
-
-                {/* Mobile Services Section */}
-                <div className="space-y-2">
-                  <div className="font-semibold text-[#334155]">Services</div>
-                  <div className="pl-4 space-y-3">
-                    {services.map((pillar) => (
-                      <Link key={pillar.category} to={`/services#${pillar.category.toLowerCase()}`}>
-                        <motion.div
-                          className="text-sm text-[#3B82F6] hover:underline"
-                          whileHover={{ x: 4 }}
-                          transition={{ duration: 0.2 }}
-                        >
-                          {pillar.category}
-                        </motion.div>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-
                 <Link to="/industries">
                   <motion.div className="relative">
                     <motion.div
