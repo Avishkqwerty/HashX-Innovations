@@ -35,13 +35,13 @@ export function ContactPage() {
     {
       icon: Mail,
       title: 'Email Us',
-      content: 'service@hashxinnovations.com',
+      content: 'services@hashxinnovations.com',
       color: '#10B981'
     },
     {
       icon: Phone,
       title: 'Call Us',
-      content: '+94 11 234 5678',
+      content: '+94 701111 440',
       color: '#F59E0B'
     },
     {
@@ -296,12 +296,12 @@ export function ContactPage() {
                     +94 11 234 5678
                   </motion.a>
                   <motion.a
-                    href="mailto:contact@hashx.live"
+                    href="mailto:services@hashxinnovations.com"
                     className="flex items-center gap-3 text-[#3B82F6] font-semibold hover:text-[#1E3A8A] transition-colors"
                     whileHover={{ x: 5 }}
                   >
                     <Mail className="w-5 h-5" />
-                    contact@hashx.live
+                    services@hashxinnovations.com
                   </motion.a>
                 </div>
               </div>
