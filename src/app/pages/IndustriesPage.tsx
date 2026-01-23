@@ -19,8 +19,8 @@ export function IndustriesPage() {
       icon: Heart,
       color: '#10B981',
       lightColor: '#10B98115',
-      description: 'Revolutionize patient care with HIPAA-compliant digital health solutions, EHR integrations, and AI-powered diagnostics. We help healthcare providers improve operational efficiency, enhance patient engagement, and deliver better health outcomes through innovative technology.',
-      benefits: ['HIPAA Compliant', 'Patient Engagement', 'Clinical Integration']
+      description: 'Revolutionize patient care with ISO 27001-compliant digital health solutions, EHR integrations, and AI-powered diagnostics. We help healthcare providers improve operational efficiency, enhance patient engagement, and deliver better health outcomes through innovative technology.',
+      benefits: ['ISO 27001 Compliant', 'Patient Engagement', 'Clinical Integration']
     },
     {
       name: 'Retail & E-Commerce',
@@ -408,7 +408,7 @@ export function IndustriesPage() {
               >
                 <Button 
                   variant="outline" 
-                  className="border-white text-white hover:bg-white/10 text-lg px-8 py-6"
+                  className="border-white/40 text-white bg-white/5 backdrop-blur-sm hover:bg-white/20 hover:border-white/60 text-lg px-8 py-6 transition-all"
                 >
                   Learn More About Our Work
                 </Button>

@@ -314,10 +314,7 @@ export function ContactPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
               >
-                <p className="text-[#065F46] text-center font-medium">
-                  💡 <strong>Pro Tip:</strong> The more details you provide, the better we can assist you! 
-                  Don't hesitate to share your specific needs or questions.
-                </p>
+               
               </motion.div>
             </motion.div>
           </div>

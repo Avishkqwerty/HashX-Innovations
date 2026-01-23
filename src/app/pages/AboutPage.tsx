@@ -3,6 +3,7 @@ import { Target, Lightbulb, Users, Shield, Rocket, Heart, Award, ArrowRight } fr
 import { staggerContainer, fadeInUp } from '@/lib/animations';
 import { Button } from '@/app/components/ui/button';
 import { Link } from 'react-router-dom';
+import AvishkaImg from '@/assets/Avishka.png';
 
 export function AboutPage() {
   const coreValues = [
@@ -36,7 +37,7 @@ export function AboutPage() {
     {
       name: 'Avishka Bandara',
       role: 'Director CEO',
-      image: 'https://ui-avatars.com/api/?name=Avishka+Bandara&size=256&background=3B82F6&color=fff&bold=true',
+      image: AvishkaImg,
       bio: 'Visionary leader driving innovation and excellence in enterprise technology solutions'
     }
   ];
@@ -283,11 +284,11 @@ export function AboutPage() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="flex justify-center">
             {team.map((member, index) => (
               <motion.div
                 key={member.name}
-                className="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm"
+                className="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm w-full max-w-xs"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -329,7 +330,7 @@ export function AboutPage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#FAFAFF] to-white">
         <div className="max-w-5xl mx-auto">
           <motion.div
-            className="bg-gradient-to-br from-[#615BEA] to-[#7A71F0] rounded-3xl p-12 text-center text-white shadow-2xl"
+            className="bg-gradient-to-br from-[#3B82F6] to-[#06B6D4] rounded-3xl p-12 text-center text-white shadow-2xl"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -357,7 +358,7 @@ export function AboutPage() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <Button className="bg-white text-[#615BEA] hover:bg-gray-100 text-lg px-8 py-6">
+                  <Button className="bg-white text-[#3B82F6] hover:bg-gray-100 text-lg px-8 py-6">
                     Get in Touch
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
@@ -370,7 +371,7 @@ export function AboutPage() {
                 >
                   <Button 
                     variant="outline" 
-                    className="border-white text-white hover:bg-white/10 text-lg px-8 py-6"
+                    className="border-white/40 text-white bg-white/5 backdrop-blur-sm hover:bg-white/20 hover:border-white/60 text-lg px-8 py-6 transition-all"
                   >
                     Join Our Team
                   </Button>

@@ -220,7 +220,7 @@ export function CaseStudiesPage() {
       </section>
 
       {/* Case Studies */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section id="case-studies" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             className="text-center mb-16"
@@ -443,13 +443,14 @@ export function CaseStudiesPage() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button 
-                  variant="outline" 
-                  className="border-white text-white hover:bg-white/10 text-lg px-8 py-6"
-                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                >
-                  View More Cases
-                </Button>
+                <Link to="/case-studies#case-studies">
+                  <Button 
+                    variant="outline" 
+                    className="border-white/40 text-white bg-white/5 backdrop-blur-sm hover:bg-white/20 hover:border-white/60 text-lg px-8 py-6 transition-all"
+                  >
+                    View More Cases
+                  </Button>
+                </Link>
               </motion.div>
             </div>
           </motion.div>

@@ -17,6 +17,7 @@ import { CaseStudiesPage } from '@/app/pages/CaseStudiesPage';
 import { IndustriesPage } from '@/app/pages/IndustriesPage';
 import { PrivacyPolicyPage } from '@/app/pages/PrivacyPolicyPage';
 import { TermsOfServicePage } from '@/app/pages/TermsOfServicePage';
+import { ServicesPage } from '@/app/pages/ServicesPage';
 
 function HomePage() {
   return (
@@ -42,6 +43,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/services" element={<ServicesPage />} />
           <Route path="/industries" element={<IndustriesPage />} />
           <Route path="/careers" element={<CareersPage />} />
           <Route path="/contact" element={<ContactPage />} />
