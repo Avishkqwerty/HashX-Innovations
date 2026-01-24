@@ -132,9 +132,11 @@ export function Navigation() {
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: idx * 0.1 }}
                         >
-                          <h4 className="font-semibold text-[#3B82F6] mb-3">
-                            {pillar.category}
-                          </h4>
+                          <Link to={`/services#${pillar.category.toLowerCase()}`}>
+                            <h4 className="font-semibold text-[#3B82F6] mb-3 hover:underline cursor-pointer transition-all">
+                              {pillar.category}
+                            </h4>
+                          </Link>
                           <ul className="space-y-2">
                             {pillar.items.map((item) => (
                               <motion.li
@@ -142,9 +144,9 @@ export function Navigation() {
                                 whileHover={{ x: 4 }}
                                 transition={{ duration: 0.2 }}
                               >
-                                <a href="#" className="text-sm text-[#334155] hover:text-[#3B82F6] transition-colors">
+                                <Link to={`/services#${pillar.category.toLowerCase()}`} className="text-sm text-[#334155] hover:text-[#3B82F6] transition-colors">
                                   {item}
-                                </a>
+                                </Link>
                               </motion.li>
                             ))}
                           </ul>
