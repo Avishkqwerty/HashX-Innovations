@@ -100,15 +100,15 @@ export function Footer() {
             >
               <motion.div className="flex items-start gap-3 text-sm text-gray-400" variants={listItem} whileHover={{ x: 4 }}>
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <span>123 Tech Avenue, Colombo 03, Sri Lanka</span>
+                <span>Junction, 310/1 Kaduwela Rd, Battaramulla 61158</span>
               </motion.div>
               <motion.div className="flex items-center gap-3 text-sm text-gray-400" variants={listItem} whileHover={{ x: 4 }}>
                 <Phone className="w-4 h-4 flex-shrink-0" />
-                <span>+94 11 234 5678</span>
+                <span>+94 70 1111 440</span>
               </motion.div>
               <motion.div className="flex items-center gap-3 text-sm text-gray-400" variants={listItem} whileHover={{ x: 4 }}>
                 <Mail className="w-4 h-4 flex-shrink-0" />
-                <span>contact@hashx.lk</span>
+                <span>services@hashxinnovations.com</span>
               </motion.div>
             </motion.div>
           </motion.div>
