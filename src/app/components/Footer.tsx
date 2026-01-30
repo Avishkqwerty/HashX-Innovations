@@ -84,7 +84,7 @@ export function Footer() {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
             >
-              <img src="/src/assets/logo.png" alt="HashX Logo" className="h-10" />
+              <img src="https://www.hashxinnovations.com/assets/logo-DhepKbHi.png" alt="HashX Logo" className="h-10" />
             </motion.div>
             <p className="text-gray-400 mb-6 text-sm">
               Engineering trusted digital futures through secure, scalable, and intelligent technology solutions.
